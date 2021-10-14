@@ -1,0 +1,27 @@
+{
+  "name": "noderestful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/1-4/index1.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node src/10/app",
+    "dev": "nodemon src/10/app"
+  },
+  "author": "Finally",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.3",
+    "koa-body": "^4.2.0",
+    "koa-json-error": "^3.1.2",
+    "koa-jwt": "^4.0.3",
+    "koa-parameter": "^3.0.1",
+    "koa-router": "^10.1.1",
+    "koa-static": "^5.0.0",
+    "mongoose": "^6.0.10"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.13"
+  }
+}
