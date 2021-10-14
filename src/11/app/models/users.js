@@ -34,12 +34,12 @@ let userSchema = new Schema({
                 type: String
             }
         ],
-        select:false
+        select: false
 
     },
     business: {
         type: String,
-        select:false
+        select: false
     },
     employments: {
         type: [
@@ -53,7 +53,7 @@ let userSchema = new Schema({
 
             }
         ],
-        select:false
+        select: false
     },
     educations: {
         type: [{
@@ -74,7 +74,14 @@ let userSchema = new Schema({
                 type: Number
             },
         }],
-        select:false
+        select: false
+    },
+    following: {
+        type: [{
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }],
+        select: false
     }
 });
 
