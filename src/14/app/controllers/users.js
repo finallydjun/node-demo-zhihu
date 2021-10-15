@@ -118,12 +118,13 @@ class UsersCtl {
     }
 
     async follow(ctx) {
+        console.log(ctx.state.user._id)
         const me = await User.findById(ctx.state.user._id).select('+following');
         if (!me.following.map(id => id.toString()).includes(ctx.params.id)) {
-            me.following.push(ctx.params.id)
+            me.following.push(ctx.params.id);
             me.save();
         }
-        ctx.status = 204
+        ctx.status = 204;
     }
 
     async unfollow(ctx) {
